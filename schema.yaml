@@ -1,1 +1,13 @@
-key: val
+COLUMNS:
+ Datetime: object 
+ Temperature: float64
+ Humidity: float64
+ WindSpeed:  float64
+ GeneralDiffuseFlows: float64
+ DiffuseFlows:  float64
+ PowerConsumption_Zone1:  float64
+ PowerConsumption_Zone2:  float64
+ PowerConsumption_Zone3:  float64
+
+TARGET_COLUMNS:
+  name: PowerConsumption_Zone1
