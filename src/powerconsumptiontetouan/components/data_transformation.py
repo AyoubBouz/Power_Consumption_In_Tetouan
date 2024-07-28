@@ -12,7 +12,7 @@ class DataTransformation:
 
 
 
-    def preprocessing__features_targets_data(self):
+    def preprocessing_features_targets_data(self):
         data = pd.read_csv(self.config.data_path)
         data.Datetime = pd.to_datetime(data.Datetime)
         data['month'] = data.Datetime.dt.month

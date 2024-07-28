@@ -16,3 +16,8 @@ data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/powerconsumption.csv
 
+model_trainer:
+  root_dir: artifacts/model_training
+  features_data_path: artifacts/data_transformation/features.csv
+  targets_data_path: artifacts/data_transformation/targets.csv
+  model_name: model.joblib

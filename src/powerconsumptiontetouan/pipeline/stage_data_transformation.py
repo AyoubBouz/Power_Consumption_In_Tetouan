@@ -22,7 +22,7 @@ class DataTransformationTrainingPipeline:
                 config = ConfigurationManager()
                 data_transformation_config = config.get_data_transformation_config()
                 data_transformation = DataTransformation(config=data_transformation_config)
-                data_transformation.preprocessing__features_targets_data()
+                data_transformation.preprocessing_features_targets_data()
 
             else:
                 raise Exception("You data schema is not valid")

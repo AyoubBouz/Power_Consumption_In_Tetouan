@@ -9,5 +9,5 @@ COLUMNS:
  PowerConsumption_Zone2:  float64
  PowerConsumption_Zone3:  float64
 
-TARGET_COLUMNS:
+TARGET_COLUMN:
   name: PowerConsumption_Zone1
