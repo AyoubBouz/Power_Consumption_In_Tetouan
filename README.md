@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Power_Consumption_In_Tetouan** project aims to predict power consumption in the city of Tetouan, Morocco, using machine learning techniques. The project involves data preprocessing, feature engineering, model training, and evaluation. Additionally, MLflow is used for experiment tracking, and the final model is deployed on AWS for scalable and accessible predictions.
+The **Power_Consumption_In_Tetouan** project aims to predict power consumption of 3 Zones in the city of Tetouan, Morocco, using machine learning techniques. The project involves data preprocessing, feature engineering, model training, and evaluation. Additionally, MLflow is used for experiment tracking, and the final model is deployed on AWS for scalable and accessible predictions.
 
 ## Table of Contents
 - [Installation](#installation)
