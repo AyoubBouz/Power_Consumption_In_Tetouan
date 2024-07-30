@@ -24,6 +24,9 @@ class ModelEvaluation:
 
 
     def log_into_mlflow(self):
+        os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/AyoubBouz/Power_Consumption_In_Tetouan.mlflow"
+        os.environ["MLFLOW_TRACKING_USERNAME"]="AyoubBouz"
+        os.environ["MLFLOW_TRACKING_PASSWORD"]="6ff0ddf969264d304e7ee862d8623b618cfed319"
 
         test_data = pd.read_csv(self.config.test_data_path)
         model = joblib.load(self.config.model_path)
@@ -31,7 +34,7 @@ class ModelEvaluation:
         test_x = test_data.drop([self.config.target_column], axis=1)
         test_y = test_data[[self.config.target_column]]
 
-
+    
         mlflow.set_registry_uri(self.config.mlflow_uri)
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 

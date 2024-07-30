@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/PC/Documents/projects/Power_Consumption_In_Tetouan/mlruns/0/4b82dd32b3bd4af2b72b2fd8f0662e49/artifacts
+end_time: 1722312060695
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4b82dd32b3bd4af2b72b2fd8f0662e49
+run_name: rumbling-shark-376
+run_uuid: 4b82dd32b3bd4af2b72b2fd8f0662e49
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722312059136
+status: 3
+tags: []
+user_id: PC

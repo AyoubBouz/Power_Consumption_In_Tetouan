@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/PC/Documents/projects/Power_Consumption_In_Tetouan/mlruns/0/1e0de202f6ed4db4a3caf71fa6124b67/artifacts
+end_time: 1722312786686
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1e0de202f6ed4db4a3caf71fa6124b67
+run_name: fortunate-frog-121
+run_uuid: 1e0de202f6ed4db4a3caf71fa6124b67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722312785170
+status: 3
+tags: []
+user_id: PC
