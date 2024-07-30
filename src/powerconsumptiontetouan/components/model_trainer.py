@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 from powerconsumptiontetouan import logger
-from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
 import joblib
 from powerconsumptiontetouan.entity.config_entity import ModelTrainerConfig
@@ -13,19 +12,18 @@ class ModelTrainer:
 
     
     def train(self):
-        features_data = pd.read_csv(self.config.features_data_path)
-        targets_data = pd.read_csv(self.config.targets_data_path)
+        train_data = pd.read_csv(self.config.train_data_path)
+        test_data = pd.read_csv(self.config.test_data_path)
 
-        # zone_1 = targets_data.columns[0]
-        # zone_2 = targets_data.columns[1]
-        # zone_3 = targets_data.columns[2]
 
-        X_train, X_test, y_train, y_test = train_test_split(features_data, targets_data[self.config.target_column],
-                                                                                                   test_size = 0.30,
-                                                                                                   random_state = 0)
+        train_x = train_data.drop([self.config.target_column], axis=1)
+        # test_x = test_data.drop([self.config.target_column], axis=1)
+        train_y = train_data[[self.config.target_column]]
+        # test_y = test_data[[self.config.target_column]]
+
 
         lr = ElasticNet(alpha=self.config.alpha, l1_ratio=self.config.l1_ratio, random_state=42)
-        lr.fit(X_train, y_train)
+        lr.fit(train_x, train_y)
 
         joblib.dump(lr, os.path.join(self.config.root_dir, self.config.model_name))
 

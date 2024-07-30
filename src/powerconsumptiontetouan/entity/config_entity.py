@@ -24,8 +24,8 @@ class DataTransformationConfig:
 @dataclass(frozen=True)
 class ModelTrainerConfig:
     root_dir: Path
-    features_data_path: Path
-    targets_data_path: Path
+    train_data_path: Path
+    test_data_path: Path
     model_name: str
     alpha: float
     l1_ratio: float

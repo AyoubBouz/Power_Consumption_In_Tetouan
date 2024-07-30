@@ -67,8 +67,8 @@ class ConfigurationManager:
 
         model_trainer_config = ModelTrainerConfig(
             root_dir=config.root_dir,
-            features_data_path = config.features_data_path,
-            targets_data_path = config.targets_data_path,
+            train_data_path = config.train_data_path,
+            test_data_path = config.test_data_path,
             model_name = config.model_name,
             alpha = params.alpha,
             l1_ratio = params.l1_ratio,

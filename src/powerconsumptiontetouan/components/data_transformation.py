@@ -12,7 +12,7 @@ class DataTransformation:
 
 
 
-    def preprocessing_features_targets_data(self):
+    def preprocessing_features_data(self):
         data = pd.read_csv(self.config.data_path)
         data.Datetime = pd.to_datetime(data.Datetime)
         data['month'] = data.Datetime.dt.month
@@ -31,6 +31,7 @@ class DataTransformation:
 
         time_encoded_df = pd.DataFrame(time_encoded.todense())
         # Concatenate the encoded time values with the scaled DataFrame
+
         data_features = pd.concat([data_features, time_encoded_df], axis=1)
 
         # Drop the original 'time' and 'time_seconds' columns
@@ -38,13 +39,20 @@ class DataTransformation:
 
         data_targets=data[targets]
 
+        data_ml=pd.concat([data_features,data_targets],axis=1)
 
-        data_features.to_csv(os.path.join(self.config.root_dir, "features.csv"),index = False)
-        data_targets.to_csv(os.path.join(self.config.root_dir, "targets.csv"),index = False)
+        train, test = train_test_split(data_ml,test_size=0.33)
+
+        train.to_csv(os.path.join(self.config.root_dir, "train.csv"),index = False)
+        test.to_csv(os.path.join(self.config.root_dir, "test.csv"),index = False)
 
         logger.info("Splited data into training and test sets")
-        logger.info(data_features.shape)
-        logger.info(data_targets.shape)
+        logger.info(train.shape)
+        logger.info(test.shape)
+
+        print(train.shape)
+        print(test.shape)
+
 
     
     
