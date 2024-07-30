@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/PC/Documents/projects/Power_Consumption_In_Tetouan/mlruns/0/6824c46109ab4d4ab61b6ae5e22fce8b/artifacts
+end_time: 1722311277763
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6824c46109ab4d4ab61b6ae5e22fce8b
+run_name: overjoyed-crow-345
+run_uuid: 6824c46109ab4d4ab61b6ae5e22fce8b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722311276257
+status: 3
+tags: []
+user_id: PC

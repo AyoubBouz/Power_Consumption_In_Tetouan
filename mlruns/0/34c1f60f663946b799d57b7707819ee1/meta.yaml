@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/PC/Documents/projects/Power_Consumption_In_Tetouan/mlruns/0/34c1f60f663946b799d57b7707819ee1/artifacts
+end_time: 1722310908722
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 34c1f60f663946b799d57b7707819ee1
+run_name: ambitious-stork-600
+run_uuid: 34c1f60f663946b799d57b7707819ee1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722310907157
+status: 3
+tags: []
+user_id: PC

@@ -19,7 +19,7 @@ class DataTransformation:
         data['weekday'] = data.Datetime.dt.day
         data['time'] = data.Datetime.dt.time.astype(str)
         features = ['Temperature', 'Humidity', 'WindSpeed', 'GeneralDiffuseFlows', 'DiffuseFlows',  'month', 'weekday', 'time']
-        targets = ['PowerConsumption_Zone1','PowerConsumption_Zone2', 'PowerConsumption_Zone3']
+        targets = ['PowerConsumption_Zone1']
         data_features =data[features]
         numerical_features = data_features.drop(columns=['time']).columns
         time_feature = ['time']
