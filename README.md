@@ -48,7 +48,7 @@ Model evaluation is conducted to assess the performance of the trained models. T
 
 ## MLflow Integration
 
-MLflow is integrated into the project to track experiments, log metrics, and store models. The `mlruns/` directory contains the logged experiments.
+MLflow is integrated into the project to track experiments, log metrics, and store models. The `mlruns/` directory contains the logged experiments. Check this link: https://dagshub.com/AyoubBouz/Power_Consumption_In_Tetouan.mlflow
 
 ## AWS Deployment
 
