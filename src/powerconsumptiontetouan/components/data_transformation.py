@@ -17,25 +17,14 @@ class DataTransformation:
         data.Datetime = pd.to_datetime(data.Datetime)
         data['month'] = data.Datetime.dt.month
         data['weekday'] = data.Datetime.dt.day
-        data['time'] = data.Datetime.dt.time.astype(str)
-        features = ['Temperature', 'Humidity', 'WindSpeed', 'GeneralDiffuseFlows', 'DiffuseFlows',  'month', 'weekday', 'time']
+        data['hour'] = data.Datetime.dt.hour
+        features = ['Temperature', 'Humidity', 'WindSpeed', 'GeneralDiffuseFlows', 'DiffuseFlows',  'month', 'weekday', 'hour']
         targets = ['PowerConsumption_Zone1']
         data_features =data[features]
-        numerical_features = data_features.drop(columns=['time']).columns
-        time_feature = ['time']
+        numerical_features = data_features.columns
+        
         scaler = MinMaxScaler()
         data_features[numerical_features] = scaler.fit_transform(data_features[numerical_features])
-        encoder = OneHotEncoder(handle_unknown="ignore")
-        # OneHot encode the 'time' feature
-        time_encoded = encoder.fit_transform(data_features[time_feature])
-
-        time_encoded_df = pd.DataFrame(time_encoded.todense())
-        # Concatenate the encoded time values with the scaled DataFrame
-
-        data_features = pd.concat([data_features, time_encoded_df], axis=1)
-
-        # Drop the original 'time' and 'time_seconds' columns
-        data_features = data_features.drop(columns=['time'])
 
         data_targets=data[targets]
 
